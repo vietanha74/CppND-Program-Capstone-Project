@@ -11,6 +11,7 @@ public:
     void setData(int width, int height, double xMin, double xMax, double yMin, double yMax);
     void start();
     void handleMouseClick(int x, int y, double Factor);
+    void handleKeyPress();
 private:
     int width_;
     int height_;

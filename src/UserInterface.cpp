@@ -32,22 +32,8 @@ void UserInterface::start() {
     imageGenerator_.generateImage(mandelbrotSet_.getMandelbrotData());
     imageGenerator_.displayImage();
     //cv::waitKey(0);
-
-    while (true)
-    {
-        int key = cv::waitKey(0);
-
-        if (key == 'q' || key == 'Q')
-            break;
-
-        if (key == 'w' || key == 'W')  // Up arrow key
-        {
-            mandelbrotSet_.calculateMandelbrotSetThread();
-            imageGenerator_.generateImage(mandelbrotSet_.getMandelbrotData());
-            imageGenerator_.displayImage();
-
-        }
-    }
+    handleKeyPress();
+    cv::destroyAllWindows();
 }
 
 void UserInterface::handleMouseClick(int x, int y, double Factor) {
@@ -77,13 +63,29 @@ double UserInterface::mapToRange(int value, int inputMin, int inputMax, double o
     return outputMin + ((value - inputMin) / static_cast<double>(inputMax - inputMin)) * (outputMax - outputMin);
 }
 
-void UserInterface::onMouse(int event, int x, int y, int flags, void* userdata)
-{
+void UserInterface::onMouse(int event, int x, int y, int flags, void* userdata){
     UserInterface* ui = static_cast<UserInterface*>(userdata);
     if (event == cv::EVENT_LBUTTONDOWN) {
         ui->handleMouseClick(x, y, 0.5);
     }
     else if (event == cv::EVENT_RBUTTONDOWN) {
         ui->handleMouseClick(x, y, 2.0);
+    }
+}
+
+void UserInterface::handleKeyPress(){
+    while (true)
+    {
+        int key = cv::waitKey(0);
+
+        if (key == 'q' || key == 'Q')
+            break;
+
+        if (key == 32) 
+        {
+            mandelbrotSet_.calculateMandelbrotSetThread();
+            imageGenerator_.generateImage(mandelbrotSet_.getMandelbrotData());
+            imageGenerator_.displayImage();
+        }
     }
 }
