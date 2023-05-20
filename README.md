@@ -12,6 +12,8 @@ This repository contains:
 
 - `src/` : Source. Constains the `main.cpp`, `ComplexNumber.cpp`, `ImageGenerator.cpp`, `Mandelbrot.cpp`, `UserInterface.cpp` files.
 
+- `output/` : Image file of the program will be generated.
+
 - `CMakeLists.txt` : cmake configuration file
 
 - `README.md` : This file
@@ -38,11 +40,27 @@ This repository contains:
 ## Run
 In `build` directory, run the executable like below:
 `./MandelbrotSet`
-Operations: 
+
+<img src="output/Run.JPG" />
+
+## Executable: 
 `Zoom in`: Press [left mouse] button to Zoom in with factor : 0.5
+
+<img src="output/ZoomIn.JPG" width="300" height="200"/>
+
 `Zoom out`: Press [right mouse] button to Zoom in with factor : 2.0
+
+<img src="output/ZoomOut.JPG" width="300" height="200"/>
+
 `Space key`: Press [Space] key on to improve quality of MandelbrotSet image
-`Ctrl + S`: To save image.
+
+- `Before`
+<img src="output/Before.JPG" width="300" height="200"/>
+
+- `After`
+<img src="output/After.JPG" width="300" height="200"/>
+
+`Ctrl + S`: To save image as default of OS.
 
 ## Rubric
 __README (All Rubric Points REQUIRED)__
