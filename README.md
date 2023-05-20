@@ -82,7 +82,7 @@ __Loops, Functions, I/O__
 |DONE | CRITERIA | MEETS SPECIFICATIONS| WHERE |
 |-- | -- | --| -- |
 | :heavy_check_mark: | The project demonstrates an understanding of C++ functions and control structures.| A variety of control structures are used in the project. The project code is clearly organized into functions.| Every *.cpp file |
-|  | The project reads data from a file and process the data, or the program writes data to a file. |  |
+|  | The project reads data from a file and process the data, or the program writes data to a file. | The project reads data from an external file or writes data to a file as part of the necessary operation of the program.|   |
 |  | The project accepts user input and processes the input.|The project accepts input from a user as part of the necessary operation of the program.|   |
 
 __Object Oriented Programming__
@@ -95,7 +95,7 @@ __Object Oriented Programming__
 | :heavy_check_mark: | Classes abstract implementation details from their interfaces. | All class member functions document their effects, either through function names, comments, or formal documentation. Member functions do not change program state in undocumented ways.| All *.cpp and *.h files |
 | :heavy_check_mark: | Classes encapsulate behavior. | Appropriate data and functions are grouped into classes. Member data that is subject to an invariant is hidden from the user. State is accessed via member functions.| All *.cpp and *.h files |
 | | Classes follow an appropriate inheritance hierarchy. | Inheritance hierarchies are logical. Composition is used instead of inheritance when appropriate. Abstract classes are composed of pure virtual functions. Override functions are specified.|  |
-|  | Overloaded functions allow the same function to operate on different parameters. |  |
+|  | Overloaded functions allow the same function to operate on different parameters. | One function is overloaded with different signatures for the same function name.|  |
 |  | Derived class functions override virtual base class functions. |One member function in an inherited class overrides a virtual base class member function.| |
 |  | Templates generalize functions in the project. | One function is declared with a template that allows it to accept a generic parameter.| |
 
