@@ -2,7 +2,8 @@
 Mandelbrot Set in C++ with OpenCV
 
 ## Overview
-This is the capstone project for the Udacity C++ Nanodegree Program. 
+This is the capstone project for the Udacity C++ Nanodegree Program. I implemented a simple Mandelbrot Set and then display it by OpenCV library .The program calculate Mandelbrot set from argurments and display as image.
+We can Zoom In/Out and improve quality of image display and then saved as into  local computer. The program is run through the command line and without takes options and input parameters.
 
 ## File Structure
 This repository contains:
@@ -37,6 +38,11 @@ This repository contains:
 ## Run
 In `build` directory, run the executable like below:
 `./MandelbrotSet`
+Operations: 
+`Zoom in`: Press [left mouse] button to Zoom in with factor : 0.5
+`Zoom out`: Press [right mouse] button to Zoom in with factor : 2.0
+`Space key`: Press [Space] key on to improve quality of MandelbrotSet image
+`Ctrl + S`: To save image.
 
 ## Rubric
 __README (All Rubric Points REQUIRED)__
